@@ -17,6 +17,8 @@ dynamic = ["version"]
 [project.optional-dependencies]
 dev = [
     "pytest",
+    "mypy",
+    "ruff",
 ]
 
 
@@ -25,3 +27,8 @@ version = {attr = "arca.__version__"}
 
 [tool.setuptools.packages.find]
 include = ["arca", "arca*"]
+
+
+[tool.ruff]
+# Enable pycodestyle (`E`) and Pyflakes (`F`) codes by default.
+select = ["E", "F"]
